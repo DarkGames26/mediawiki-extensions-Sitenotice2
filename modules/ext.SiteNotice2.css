@@ -1,0 +1,31 @@
+:root {
+	--filter-glass: blur(20px) saturate(180%);
+	--border-radius-mod: 8px;
+}
+
+.client-js .mw-sitenotice2 {
+	display: none;
+}
+
+.mw-sitenotice2-close {
+	visibility: hidden;
+}
+
+/* @noflip */ .sitedir-ltr .mw-sitenotice2-close {
+	float: right;
+}
+
+/* @noflip */ .sitedir-rtl .mw-sitenotice2-close {
+	float: left;
+}
+
+/* @noflip */ .sitedir-ltr .mw-sitenotice2-body {
+	margin: 0.5em 20% 0.5em 5em;
+}
+
+/* @noflip */ .sitedir-rtl .mw-sitenotice2-body {
+	margin: 0.5em 5em 0.5em 20%;
+}
+#siteNotice p {
+        text-align: left;
+}

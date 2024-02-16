@@ -1,0 +1,58 @@
+{
+	"name": "SiteNotice2",
+	"version": "1.0",
+	"author": [
+		"Dark"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:SiteNotice2",
+	"descriptionmsg": "sitenotice-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"config": {
+		"MajorSiteNoticeID": {
+			"value": 1
+		},
+		"DismissableSiteNoticeForAnons": {
+			"value": false
+		}
+	},
+	"Hooks": {
+		"SiteNoticeAfter": "MediaWiki\\Extension\\DismissableSiteNotice\\Hooks::onSiteNoticeAfter"
+	},
+	"MessagesDirs": {
+		"DismissableSiteNotice": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.dismissableSiteNotice": {
+			"scripts": "ext.sitenotice2.js",
+			"dependencies": [
+				"jquery.cookie",
+				"mediawiki.util"
+			],
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		},
+		"ext.dismissableSiteNotice.styles": {
+			"styles": "ext.sitenotice2.css",
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		}
+	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "modules",
+		"remoteExtPath": "DismissableSiteNotice/modules"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\DismissableSiteNotice\\": "includes/"
+	},
+	"manifest_version": 2,
+	"requires": {
+		"MediaWiki": ">= 1.39.0"
+	}
+}
