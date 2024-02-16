@@ -4,7 +4,7 @@
 	"author": [
 		"Dark"
 	],
-	"url": "https://www.mediawiki.org/wiki/Extension:SiteNotice2",
+	"url": "https://github.com/DarkGames26/mediawiki-extensions-Sitenotice2",
 	"descriptionmsg": "sitenotice-desc",
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",

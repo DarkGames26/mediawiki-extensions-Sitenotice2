@@ -5,5 +5,5 @@
 	"sitenotice_id": "0",
 	"sitenotice_close": "dismiss",
 	"sitenotice_close-brackets": "[$1]",
-	"sitenotice-desc": "Allows users to close the sitenotice"
+	"sitenotice-desc": "Extends the visual appearance of the Sitenotice in Citizen. Also allows users to close the notice."
 }
