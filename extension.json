@@ -1,6 +1,6 @@
 {
 	"name": "SiteNotice2",
-	"version": "1.0",
+	"version": "1.2",
 	"author": [
 		"Dark"
 	],
@@ -20,7 +20,7 @@
 		"SiteNoticeAfter": "MediaWiki\\Extension\\DismissableSiteNotice\\Hooks::onSiteNoticeAfter"
 	},
 	"MessagesDirs": {
-		"DismissableSiteNotice": [
+		"Sitenotice2": [
 			"i18n"
 		]
 	},
