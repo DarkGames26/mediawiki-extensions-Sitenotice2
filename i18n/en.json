@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Dark"
+		]
+	},
+	"sitenotice_close": "close",
+	"sitenotice-desc": "Extends the visual appearance of the Sitenotice in Citizen. It also allows users to close the notice."
+}
