@@ -21,9 +21,14 @@ wfLoadExtension( 'Sitenotice2' );
 ```
 3. **✔️Done** - Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
+## 👀 Notes
+⚠️ This extension should not be used at the same time as DismissableSiteNotice, since it was created based on that extension, therefore it has all the functionality that DismissableSiteNotice already included.
+
+
 ## 🧞 Configurations
 **Configurations.**
 
 | ⚙️ | Name | Description | Values | Default
 :--- | :--- | :--- | :--- | :---
 | ⚙️ | `$wgDismissableSiteNoticeForAnons` | This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the sitenotice shown. Available for MW 1.25 + | `true` or `false` | true
+
