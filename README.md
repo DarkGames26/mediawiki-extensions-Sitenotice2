@@ -21,12 +21,11 @@ wfLoadExtension( 'Sitenotice2' );
 ```
 3. **✔️Done** - Navigate to Special:Version on your wiki to verify that the extension is successfully installed.
 
-## 👀 Notes
-⚠️ This extension should not be used at the same time as DismissableSiteNotice, since it was created based on that extension, therefore it has all the functionality that DismissableSiteNotice already included.
-
+### 👀 Notes
+⚠️ This extension should not be used with DismissableSiteNotice. It was created based on that extension, so it has all the functionality that DismissableSiteNotice already had.
 
 ## 🧞 Configurations
-**Configurations.**
+**Available configurations**
 
 | ⚙️ | Name | Description | Values | Default
 :--- | :--- | :--- | :--- | :---
