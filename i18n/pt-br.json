@@ -8,7 +8,6 @@
 			555
 		]
 	},
-	"sitenotice_close": "ocultar",
-	"sitenotice_close-brackets": "[$1]",
+	"sitenotice_close": "Ocultar",
 	"sitenotice-desc": "Permite que os usuários ocultem o banner de avisos"
 }

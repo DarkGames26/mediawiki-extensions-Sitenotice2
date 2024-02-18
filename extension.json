@@ -13,7 +13,7 @@
 			"value": 1
 		},
 		"DismissableSiteNoticeForAnons": {
-			"value": false
+			"value": true
 		}
 	},
 	"Hooks": {

@@ -48,7 +48,7 @@ class Hooks {
 							[
 								'tabindex' => '0',
 								'role' => 'button',
-								'class' => 'mw-dismissable-notice-close-button',
+								'class' => 'oo-ui-icon oo-ui-icon-close mw-dismissable-notice-close-button',
 								'href' => '#',
 								'title' => $skin->msg( 'sitenotice_close' )->text()
 							],
