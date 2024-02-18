@@ -24,6 +24,6 @@ wfLoadExtension( 'Sitenotice2' );
 ## 🧞 Configurations
 **Configurations.**
 
-|     | Name | Description | Values | Default
+| Name | Description | Values | Default
 :--- | :--- | :--- | :---
-| ⚙️  | `$wgDismissableSiteNoticeForAnons` | This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the sitenotice shown. Available for MW 1.25 + | `true` or `false` | true |
+| ⚙️ `$wgDismissableSiteNoticeForAnons` | This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the sitenotice shown. Available for MW 1.25 + | `true` or `false` | true
