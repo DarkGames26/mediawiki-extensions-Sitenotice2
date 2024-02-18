@@ -29,3 +29,53 @@
 #siteNotice p {
         text-align: left;
 }
+
+/* Sitenotice2 CSS */
+.mw-sitenotice2 {
+    white-space: nowrap;
+    background-color: var(--color-primary--hsl);
+    backdrop-filter: var(--filter-glass);
+    border-radius: var(--border-radius-mod);
+    box-shadow: 0 3px 12px 0 #0000004d;
+    overflow: hidden;
+    border: 1px solid var(--border-color-base);
+    display: flex;
+    flex-direction: column;
+}
+
+.mw-sitenotice2-header {
+    text-align: left;
+    background: var(--content-background);
+    border-radius: var(--border-radius-mod) var(--border-radius-mod) 0 0;
+    padding: 10px 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.mw-sitenotice2-header div {
+       font-size: 18px; 
+       padding: 0 10px;  
+}
+
+.mw-sitenotice2-close {
+    position: relative;
+    margin-left: 50%;
+}
+
+.sitenotice p  {
+       padding: 10px 18px;
+}
+
+
+.mw-sitenotice2:before {
+    background-color: var(--color-primary);
+    border-radius: 3px 0 0 3px;
+    content: "";
+    display: block;
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 6px;
+}

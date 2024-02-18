@@ -37,21 +37,23 @@ class Hooks {
 			$out->addModules( 'ext.sitenotice2' );
 			$out->addJsConfigVars( 'wgSiteNoticeId', "$major.$minor" );
 
-			// Modificamos la estructura HTML para incluir el nombre del wiki y el botón de cerrar
-			$wikiName = htmlspecialchars( $wgSitename ); // Obtenemos el nombre del wiki
+			// HTML para incluir el nombre del wiki y el botón de cerrar
+			$wikiName = htmlspecialchars( $wgSitename ); // Obtener el nombre del wiki
 			$notice = Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2' ],
-				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-header' ], // Nuevo elemento para el encabezado
-					Html::element( 'h2', [], $wikiName ) . // Agregamos el nombre del wiki
+				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-header' ],
+					Html::element( 'div', [], $wikiName ) . // Agregamos el nombre del wiki
 					Html::rawElement( 'span', [ 'class' => 'mw-sitenotice2-close' ],
-						$skin->msg( 'sitenotice_close-brackets' )
-							->rawParams(
-								Html::element(
-									'a',
-									[ 'tabindex' => '0', 'role' => 'button' ],
-									$skin->msg( 'sitenotice_close' )->text()
-								)
-							)
-							->escaped()
+						Html::element(
+							'a',
+							[
+								'tabindex' => '0',
+								'role' => 'button',
+								'class' => 'mw-dismissable-notice-close-button',
+								'href' => '#',
+								'title' => $skin->msg( 'sitenotice_close' )->text()
+							],
+							'<span class="oo-ui-icon oo-ui-icon-close"></span>' // Icono de cierre de MediaWiki UI
+						)
 					)
 				) .
 				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-body' ], $notice )
