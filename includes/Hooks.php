@@ -2,8 +2,11 @@
 
 namespace MediaWiki\Extension\DismissableSiteNotice;
 
-use Html;
+use MediaWiki\Hook\SiteNoticeAfterHook;
+use MediaWiki\Html\Html;
+use MediaWiki\Parser\Sanitizer;
 use Skin;
+use Xml;
 
 class Hooks {
 
@@ -13,8 +16,7 @@ class Hooks {
 	 * @suppress SecurityCheck-DoubleEscaped
 	 */
 	public static function onSiteNoticeAfter( &$notice, $skin ) {
-		global $wgMajorSiteNoticeID, $wgDismissableSiteNoticeForAnons, $wgSitename; // Añadimos $wgSitename
-
+		global $wgMajorSiteNoticeID, $wgDismissableSiteNoticeForAnons, $wgSitename;
 		if ( method_exists( $skin, 'getVersion' ) ) {
 			// does the skin support versioning and if so does it provide dismissable site notices?
 			if ( $skin->getVersion() === 2 ) {
@@ -33,31 +35,22 @@ class Hooks {
 			$minor = (int)$skin->msg( 'sitenotice_id' )->inContentLanguage()->text();
 
 			$out = $skin->getOutput();
-			$out->addModuleStyles( 'ext.sitenotice2.styles' );
-			$out->addModules( 'ext.sitenotice2' );
+			$out->addModuleStyles( 'ext.dismissableSiteNotice.styles' );
+			$out->addModules( 'ext.dismissableSiteNotice' );
 			$out->addJsConfigVars( 'wgSiteNoticeId', "$major.$minor" );
-
-			// HTML para incluir el nombre del wiki y el botón de cerrar
-			$wikiName = htmlspecialchars( $wgSitename ); // Obtener el nombre del wiki
+			 
+			$wikiName = htmlspecialchars( $wgSitename );
 			$notice = Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2' ],
-				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-header' ],
-					Html::element( 'div', [], $wikiName ) . // Agregamos el nombre del wiki
-					Html::rawElement( 'span', [ 'class' => 'mw-sitenotice2-close' ],
-						Html::element(
-							'a',
-							[
-								'tabindex' => '0',
-								'role' => 'button',
-								'class' => 'oo-ui-icon oo-ui-icon-close mw-dismissable-notice-close-button',
-								'href' => '#',
-								'title' => $skin->msg( 'sitenotice_close' )->text()
-							],
-							'<span class="oo-ui-icon oo-ui-icon-close"></span>' // Icono de cierre de MediaWiki UI
-						)
+			Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-header' ],
+			Html::element( 'div', [], $wikiName ) . // Nombre del wiki
+				Html::rawElement( 'div', [ 'class' => 'mw-dismissable-notice-close' ],
+					Html::element('a', ['tabindex' => '0', 'role' => 'button', 'class' => 'mw-dismissable-notice-close-button', 'title' => $skin->msg( 'sitenotice_close' )->text()],
+						'<span class="oo-ui-icon oo-ui-icon-close"></span>' // Close icon
 					)
+				  )
 				) .
-				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-body' ], $notice )
-			);
+				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-body' ], $notice )	
+				);
 		}
 
 		if ( $skin->getUser()->isAnon() ) {

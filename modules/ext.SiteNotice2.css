@@ -1,39 +1,32 @@
+/*  🎨 Vars 
+    ---------  */
 :root {
 	--filter-glass: blur(20px) saturate(180%);
 	--border-radius-mod: 8px;
 }
 
-.client-js .mw-sitenotice2 {
-	display: none;
+/* 👀 Sitenotice position */
+#siteNotice { 
+    position: fixed !important; /* 👀 Cancelar cualquier otro valor */
+    width: 420px;
+    height: auto;
+    max-height: 232px;
+    bottom: 18px;
+    left: 75px;
+    padding: 0px;
+    z-index: 10;
 }
 
-.mw-sitenotice2-close {
-	visibility: hidden;
-}
-
-/* @noflip */ .sitedir-ltr .mw-sitenotice2-close {
-	float: right;
-}
-
-/* @noflip */ .sitedir-rtl .mw-sitenotice2-close {
-	float: left;
-}
-
-/* @noflip */ .sitedir-ltr .mw-sitenotice2-body {
-	margin: 0.5em 20% 0.5em 5em;
-}
-
-/* @noflip */ .sitedir-rtl .mw-sitenotice2-body {
-	margin: 0.5em 5em 0.5em 20%;
-}
+/* ⬅️ Text align to left */
 #siteNotice p {
-        text-align: left;
+    text-align: left;
+    padding: 10px 18px;
 }
 
-/* Sitenotice2 CSS */
+/* 🚀 Container */
 .mw-sitenotice2 {
     white-space: nowrap;
-    background-color: var(--color-primary--hsl);
+    background-color: var(--color-primary--hsl); /* ✏️ TODO: Only work in Citizen */
     backdrop-filter: var(--filter-glass);
     border-radius: var(--border-radius-mod);
     box-shadow: 0 3px 12px 0 #0000004d;
@@ -41,33 +34,10 @@
     border: 1px solid var(--border-color-base);
     display: flex;
     flex-direction: column;
+    transition: opacity 0.2s;
 }
 
-.mw-sitenotice2-header {
-    text-align: left;
-    background: var(--content-background);
-    border-radius: var(--border-radius-mod) var(--border-radius-mod) 0 0;
-    padding: 10px 10px;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-.mw-sitenotice2-header div {
-       font-size: 18px; 
-       padding: 0 10px;  
-}
-
-.mw-sitenotice2-close {
-    position: relative;
-    margin-left: 50%;
-}
-
-.sitenotice p  {
-       padding: 10px 18px;
-}
-
-
+/* 📏 Border left with color */
 .mw-sitenotice2:before {
     background-color: var(--color-primary);
     border-radius: 3px 0 0 3px;
@@ -78,4 +48,45 @@
     position: absolute;
     top: 0;
     width: 6px;
+}
+
+/* 📓 Header Container */
+.mw-sitenotice2-header {
+    text-align: left;
+    background: var(--content-background); /* ✏️ TODO: Only work in Citizen */
+    border-radius: var(--border-radius-mod) var(--border-radius-mod) 0 0;
+    padding: 10px 10px;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 📖 h2 styles */
+.mw-sitenotice2-header div {
+       font-size: 18px; 
+       padding: 0 10px;  
+       font-weight: 500;
+}
+
+/* ❌ Close button */
+.mw-sitenotice2-close {
+    position: relative;
+    margin-left: 50%;
+}
+
+/* 🧪 Other styles */
+.client-js .mw-sitenotice2 {
+	display: none;
+}
+
+.mw-sitenotice2-close {
+	visibility: hidden;
+}
+
+/* @noflip */ .sitedir-ltr .mw-sitenotice2-body {
+    text-align: left;
+}
+
+/* @noflip */ .sitedir-rtl .mw-sitenotice2-body {
+    text-align: right;
 }
