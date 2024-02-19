@@ -1,92 +1,109 @@
 /*  🎨 Vars 
     ---------  */
-:root {
-	--filter-glass: blur(20px) saturate(180%);
-	--border-radius-mod: 8px;
-}
-
-/* 👀 Sitenotice position */
-#siteNotice { 
-    position: fixed !important; /* 👀 Cancelar cualquier otro valor */
-    width: 420px;
-    height: auto;
-    max-height: 232px;
-    bottom: 18px;
-    left: 75px;
-    padding: 0px;
-    z-index: 10;
-}
-
-/* ⬅️ Text align to left */
-#siteNotice p {
-    text-align: left;
-    padding: 10px 18px;
-}
-
-/* 🚀 Container */
-.mw-sitenotice2 {
-    white-space: nowrap;
-    background-color: var(--color-primary--hsl); /* ✏️ TODO: Only work in Citizen */
-    backdrop-filter: var(--filter-glass);
-    border-radius: var(--border-radius-mod);
-    box-shadow: 0 3px 12px 0 #0000004d;
-    overflow: hidden;
-    border: 1px solid var(--border-color-base);
-    display: flex;
-    flex-direction: column;
-    transition: opacity 0.2s;
-}
-
-/* 📏 Border left with color */
-.mw-sitenotice2:before {
-    background-color: var(--color-primary);
-    border-radius: 3px 0 0 3px;
-    content: "";
-    display: block;
-    height: 100%;
-    left: 0;
-    position: absolute;
-    top: 0;
-    width: 6px;
-}
-
-/* 📓 Header Container */
-.mw-sitenotice2-header {
-    text-align: left;
-    background: var(--content-background); /* ✏️ TODO: Only work in Citizen */
-    border-radius: var(--border-radius-mod) var(--border-radius-mod) 0 0;
-    padding: 10px 10px;
-    align-items: center;
-    display: flex;
-    justify-content: space-between;
-}
-
-/* 📖 h2 styles */
-.mw-sitenotice2-header div {
-       font-size: 18px; 
-       padding: 0 10px;  
-       font-weight: 500;
-}
-
-/* ❌ Close button */
-.mw-sitenotice2-close {
-    position: relative;
-    margin-left: 50%;
-}
-
-/* 🧪 Other styles */
-.client-js .mw-sitenotice2 {
-	display: none;
-}
-
-.mw-sitenotice2-close {
-	visibility: hidden;
-}
-
-/* @noflip */ .sitedir-ltr .mw-sitenotice2-body {
-    text-align: left;
-}
-
-/* @noflip */ .sitedir-rtl .mw-sitenotice2-body {
-    text-align: right;
-}
+    :root {
+        --filter-glass: blur(20px) saturate(180%);
+        --border-radius-mod: 8px;
+    }
+    
+    /* 👀 Sitenotice position */
+    #siteNotice { 
+        position: fixed !important; /* 👀 Cancelar cualquier otro valor */
+        width: 420px;
+        height: auto;
+        max-height: 232px;
+        bottom: 18px;
+        left: 75px;
+        padding: 0px;
+        z-index: 10;
+        transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
+    }
+    
+    
+    @media only screen and (max-width: 1135px) {
+      #siteNotice {
+        width: 100%; 
+        bottom: 57px;
+        left: 0;
+        font-size: 110%;
+        }
+        .mw-sitenotice2, .mw-sitenotice2:before, .mw-sitenotice2-header {
+          border-radius: 0 !important;
+      }
+        .citizen-scroll--down #siteNotice {
+            bottom: 0;
+        }
+    }
+    
+    /* ⬅️ Text align to left */
+    #siteNotice p {
+        text-align: left;
+        padding: 10px 18px;
+    }
+    
+    /* 🚀 Container */
+    .mw-sitenotice2 {
+        white-space: nowrap;
+        background-color: var(--color-primary--hsl); /* ✏️ TODO: Only work in Citizen */
+        backdrop-filter: var(--filter-glass);
+        border-radius: var(--border-radius-mod);
+        box-shadow: 0 3px 12px 0 #0000004d;
+        overflow: hidden;
+        border: 1px solid var(--border-color-base);
+        display: flex;
+        flex-direction: column;
+        transition: opacity 0.2s;
+        transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
+    }
+    
+    /* 📏 Border left with color */
+    .mw-sitenotice2:before {
+        background-color: var(--color-primary);
+        border-radius: var(--border-radius-mod) 0 0 var(--border-radius-mod);
+        content: "";
+        display: block;
+        height: 100%;
+        left: 0;
+        position: absolute;
+        top: 0;
+        width: 6px;
+    }
+    
+    /* 📓 Header Container */
+    .mw-sitenotice2-header {
+        text-align: left;
+        background: var(--content-background); /* ✏️ TODO: Only work in Citizen */
+        border-radius: var(--border-radius-mod) var(--border-radius-mod) 0 0;
+        padding: 10px 10px;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    /* 📖 h2 styles */
+    .mw-sitenotice2-header div:first-child {
+           font-size: 18px; 
+           padding: 0 10px;  
+           font-weight: 500;
+    }
+    
+    /* ❌ Close button */
+    .mw-sitenotice2-close {
+        position: relative;
+    }
+    
+    /* 🧪 Other styles */
+    .client-js .mw-sitenotice2 {
+        display: none;
+    }
+    
+    .mw-sitenotice2-close {
+        visibility: hidden;
+    }
+    
+    /* @noflip */ .sitedir-ltr .mw-sitenotice2-body {
+        text-align: left;
+    }
+    
+    /* @noflip */ .sitedir-rtl .mw-sitenotice2-body {
+        text-align: right;
+    }
