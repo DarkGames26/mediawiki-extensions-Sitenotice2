@@ -14,7 +14,7 @@
 	}
 
 	// Otherwise, show the notice ...
-	mw.util.addCSS( '.client-js .mw-dismissable-notice { display: block; }' );
+	mw.util.addCSS( '.client-js .sitenotice2 { display: flex; }' );
 
 	// ... and enable the dismiss button.
 	$( function () {
@@ -27,7 +27,7 @@
 					e.type === 'click' ||
 					e.type === 'keypress' && e.which === 13
 				) {
-					$( this ).closest( '.mw-dismissable-notice' ).hide();
+					$( this ).closest( '.sitenotice2' ).hide();
 					$.cookie( cookieName, siteNoticeId, {
 						expires: 30,
 						path: '/'
