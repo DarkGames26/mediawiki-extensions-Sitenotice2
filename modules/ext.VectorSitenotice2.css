@@ -2,10 +2,10 @@
     ---------  */
     :root {
         --filter-glass: blur(20px) saturate(180%);
-        --sitenotice2-border-radius: 8px;
-        --sitenotice2-border: var(--border-color-base);
+        --sitenotice2-border-radius: 2px;
+        --sitenotice2-border: #a7d7f9;
 
-        --sitenotice2-background: var(--color-primary--hsl);
+        --sitenotice2-background: #fbfbfb;
     }
     
     /* 👀 Sitenotice position */
@@ -46,8 +46,7 @@
     /* 🚀 Container */
     .mw-sitenotice2 {
         white-space: nowrap;
-        background-color: var(--sitenotice2-background);
-        backdrop-filter: var(--filter-glass);
+        background-color: var(--color-primary--hsl);
         border-radius: var(--sitenotice2-border-radius);
         box-shadow: 0 3px 12px 0 #0000004d;
         overflow: hidden;
@@ -93,12 +92,10 @@
     .mw-dismissable-notice-close {
         cursor: pointer;
         transition: opacity 0.2s;
-        filter: var(--filter-invert);
-        opacity: var(--opacity-icon-base)
     }
     
     .mw-dismissable-notice-close:hover {
-        opacity: var(--opacity-icon-hover)
+        opacity: 0.8;
     }
     
     /* 🧪 Other styles */

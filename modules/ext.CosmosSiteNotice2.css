@@ -3,11 +3,13 @@
     :root {
         --filter-glass: blur(20px) saturate(180%);
         --sitenotice2-border-radius: 8px;
-        --sitenotice2-border: var(--border-color-base);
-
-        --sitenotice2-background: var(--color-primary--hsl);
     }
     
+
+    /* TODO: Update CSS for Cosmos
+    *
+    *
+    */
     /* 👀 Sitenotice position */
     #siteNotice { 
         position: fixed !important; /* 👀 Cancelar cualquier otro valor */
@@ -46,12 +48,12 @@
     /* 🚀 Container */
     .mw-sitenotice2 {
         white-space: nowrap;
-        background-color: var(--sitenotice2-background);
+        background-color: var(--color-primary--hsl); /* ✏️ TODO: Only work in Citizen */
         backdrop-filter: var(--filter-glass);
         border-radius: var(--sitenotice2-border-radius);
         box-shadow: 0 3px 12px 0 #0000004d;
         overflow: hidden;
-        border: 1px solid var(--sitenotice2-border);
+        border: 1px solid var(--border-color-base);
         display: flex;
         flex-direction: column;
         transition: opacity 0.2s;
@@ -90,15 +92,8 @@
     }
     
     /* ❌ Close button */
-    .mw-dismissable-notice-close {
-        cursor: pointer;
-        transition: opacity 0.2s;
-        filter: var(--filter-invert);
-        opacity: var(--opacity-icon-base)
-    }
-    
-    .mw-dismissable-notice-close:hover {
-        opacity: var(--opacity-icon-hover)
+    .mw-sitenotice2-close {
+        position: relative;
     }
     
     /* 🧪 Other styles */

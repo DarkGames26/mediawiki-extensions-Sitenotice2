@@ -1,9 +1,9 @@
 <?php
 
-namespace MediaWiki\Extension\DismissableSiteNotice;
+namespace MediaWiki\Extension\Sitenotice2;
 
 use MediaWiki\Hook\SiteNoticeAfterHook;
-use MediaWiki\Html\Html;
+use html;
 use MediaWiki\Parser\Sanitizer;
 use Skin;
 use Xml;
@@ -34,23 +34,41 @@ class Hooks {
 			$major = (int)$wgMajorSiteNoticeID;
 			$minor = (int)$skin->msg( 'sitenotice_id' )->inContentLanguage()->text();
 
+			$skinName = $skin->getSkinName();
 			$out = $skin->getOutput();
-			$out->addModuleStyles( 'ext.dismissableSiteNotice.styles' );
+		
+			// Cargar estilos dependiendo de la skin
+			switch ($skinName) {
+				case 'citizen':
+					$out->addModuleStyles( 'ext.dismissableSiteNotice.styles' );
+					break;
+				case 'cosmos':
+					$out->addModuleStyles( 'ext.dismissableSiteNotice.cosmos.styles' );
+					break;
+				case 'vector':
+					$out->addModuleStyles( 'ext.dismissableSiteNotice.vector.styles' );
+					break;
+				default:
+					$out->addModuleStyles( 'ext.dismissableSiteNotice.styles' );
+			}
+
 			$out->addModules( 'ext.dismissableSiteNotice' );
 			$out->addJsConfigVars( 'wgSiteNoticeId', "$major.$minor" );
 			 
+			$noticeCloseMsg = $skin->msg( 'sitenotice_close' )->text();
 			$wikiName = htmlspecialchars( $wgSitename );
 			$notice = Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2' ],
 			Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-header' ],
 			Html::element( 'div', [], $wikiName ) . // Nombre del wiki
-				Html::rawElement( 'div', [ 'class' => 'mw-dismissable-notice-close' ],
-					Html::element('a', ['tabindex' => '0', 'role' => 'button', 'class' => 'mw-dismissable-notice-close-button', 'title' => $skin->msg( 'sitenotice_close' )->text()],
-						'<span class="oo-ui-icon oo-ui-icon-close"></span>' // Close icon
-					)
-				  )
-				) .
-				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-body' ], $notice )	
-				);
+			Html::rawElement( 'div', [ 'class' => 'mw-dismissable-notice-close' ],
+            	sprintf(
+                '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20"><title>%s</title><path d="m4.34 2.93 12.73 12.73-1.41 1.41L2.93 4.35z"/><path d="M17.07 4.34 4.34 17.07l-1.41-1.41L15.66 2.93z"/></svg>',
+                htmlspecialchars( $noticeCloseMsg )
+            	)
+        	)
+    	) .
+    	Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-body' ], $notice )
+);
 		}
 
 		if ( $skin->getUser()->isAnon() ) {

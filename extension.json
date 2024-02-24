@@ -17,7 +17,7 @@
 		}
 	},
 	"Hooks": {
-		"SiteNoticeAfter": "MediaWiki\\Extension\\DismissableSiteNotice\\Hooks::onSiteNoticeAfter"
+		"SiteNoticeAfter": "MediaWiki\\Extension\\SiteNotice2\\Hooks::onSiteNoticeAfter"
 	},
 	"MessagesDirs": {
 		"Sitenotice2": [
@@ -26,7 +26,7 @@
 	},
 	"ResourceModules": {
 		"ext.dismissableSiteNotice": {
-			"scripts": "ext.sitenotice2.js",
+			"scripts": "ext.SiteNotice2.js",
 			"dependencies": [
 				"jquery.cookie",
 				"mediawiki.util"
@@ -37,19 +37,33 @@
 			]
 		},
 		"ext.dismissableSiteNotice.styles": {
-			"styles": "ext.sitenotice2.css",
+			"styles": "ext.SiteNotice2.css",
 			"targets": [
 				"desktop",
 				"mobile"
 			]
-		}
+		},
+		"ext.dismissableSiteNotice.cosmos.styles": {
+			"styles": "ext.CosmosSiteNotice2.css",
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		},
+		"ext.dismissableSiteNotice.vector.styles": {
+			"styles": "ext.VectorSiteNotice2.css",
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		}	
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "modules",
-		"remoteExtPath": "DismissableSiteNotice/modules"
+		"remoteExtPath": "SiteNotice2/modules"
 	},
 	"AutoloadNamespaces": {
-		"MediaWiki\\Extension\\DismissableSiteNotice\\": "includes/"
+		"MediaWiki\\Extension\\SiteNotice2\\": "includes/"
 	},
 	"manifest_version": 2,
 	"requires": {
