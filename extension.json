@@ -28,7 +28,7 @@
 		"ext.dismissableSiteNotice": {
 			"scripts": "ext.SiteNotice2.js",
 			"dependencies": [
-				"jquery.cookie",
+				"mediawiki.cookie",
 				"mediawiki.util"
 			],
 			"targets": [
