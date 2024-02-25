@@ -74,16 +74,25 @@
         text-align: left;
         background: var(--sitenotice2-background--header);
         border-radius: var(--sitenotice2-border-radius) var(--sitenotice2-border-radius) 0 0;
-        padding: 10px 10px;
+        padding: 10px 15px;
+        display: grid;
         align-items: center;
-        display: flex;
-        justify-content: space-between;
+        align-content: center;
+        grid-template-columns: auto 1fr auto;
+        gap: 5px;
+    }
+    
+    /* 🎀 Icon */
+    .mw-sitenotice-icon img {
+        display: block;
+        max-height: 30px;
+        max-width: 75px;
+        object-fit: scale-down;
     }
     
     /* 📖 h2 styles */
     .mw-sitenotice2-header div:first-child {
            font-size: 18px; 
-           padding: 0 10px;  
            font-weight: 600;
            text-decoration: underline var(--sitenotice2-border);
     }

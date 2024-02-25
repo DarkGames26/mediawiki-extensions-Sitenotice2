@@ -76,20 +76,28 @@
     /* 📓 Header Container */
     .mw-sitenotice2-header {
         text-align: left;
-        background: var(--content-background); /* ✏️ TODO: Only work in Citizen */
+        background: var(--sitenotice2-background--header);
         border-radius: var(--sitenotice2-border-radius) var(--sitenotice2-border-radius) 0 0;
-        padding: 10px 10px;
+        padding: 10px 15px;
+        display: grid;
         align-items: center;
-        display: flex;
-        justify-content: space-between;
+        align-content: center;
+        grid-template-columns: auto 1fr auto;
+        gap: 5px;
     }
     
-    /* 📖 h2 styles */
-    .mw-sitenotice2-header div:first-child {
-           font-size: 18px; 
-           padding: 0 10px;  
-           font-weight: 500;
+    /* 🎀 Icon */
+    .mw-sitenotice-icon img {
+        display: block;
+        max-height: 30px;
+        max-width: 75px;
+        object-fit: scale-down;
     }
+    /* 📖 h2 styles */
+    .mw-sitenotice2-header div:nth-child(2) {
+        font-size: 18px; 
+        font-weight: 500;
+ }
     
     /* ❌ Close button */
     .mw-dismissable-notice-close {
@@ -97,7 +105,6 @@
         transition: opacity 0.2s;
         filter: var(--filter-invert);
         opacity: var(--opacity-icon-base);
-        padding: 0 5px;
     }
     
     .mw-dismissable-notice-close:hover {

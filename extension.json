@@ -50,6 +50,13 @@
 				"mobile"
 			]
 		},
+		"ext.dismissableSiteNotice.minerva.styles": {
+			"styles": "ext.MinervaSiteNotice2.css",
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		},
 		"ext.dismissableSiteNotice.vector.styles": {
 			"styles": "ext.VectorSiteNotice2.css",
 			"targets": [

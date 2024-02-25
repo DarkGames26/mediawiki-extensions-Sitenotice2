@@ -1,13 +1,12 @@
 /*  🎨 Vars 
     ---------  */
     :root {
-        --filter-glass: blur(20px) saturate(180%);
-        --sitenotice2-border-radius: 2px;
-        --sitenotice2-border: #000;
+        --sitenotice2-border-radius: 0;
+        --sitenotice2-border: #6d6d6f;
 
-        --sitenotice2-background: #fbfbfb;
-        --sitenotice2-background--header: #c0c0c0;
-        --sitenotice2-background--secondary: #000;
+        --sitenotice2-background: #eaecf0;
+        --sitenotice2-background--header: #eaecf0;
+        --sitenotice2-background--secondary: #6d6d6f;
     }
     
     /* 👀 Sitenotice position */
@@ -94,8 +93,9 @@
     .mw-sitenotice2-header div:nth-child(2) {
         font-size: 18px; 
         font-weight: 500;
+        text-decoration: underline var(--sitenotice2-border);
  }
-    
+
     /* ❌ Close button */
     .mw-dismissable-notice-close {
         cursor: pointer;
