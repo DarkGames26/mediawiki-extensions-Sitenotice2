@@ -1,10 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"Icvav",
-			"Muro de Aguas"
+			"DarkGames26"
 		]
 	},
 	"sitenotice_close": "Ocultar",
-	"sitenotice-desc": "Extiende la apariencia visual del Sitenotice en Citizen. También permite a los usuarios cerrar el aviso."
+	"sitenotice-desc": "Extiende la apariencia visual del Sitenotice. También permite a los usuarios cerrar el aviso."
 }

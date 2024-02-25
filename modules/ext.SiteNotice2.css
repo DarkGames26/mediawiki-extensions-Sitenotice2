@@ -6,6 +6,8 @@
         --sitenotice2-border: var(--border-color-base);
 
         --sitenotice2-background: var(--color-primary--hsl);
+        --sitenotice2-background--header: var(--content-background);
+        --sitenotice2-background--secondary: var(--color-primary);
     }
     
     /* 👀 Sitenotice position */
@@ -60,7 +62,7 @@
     
     /* 📏 Border left with color */
     .mw-sitenotice2:before {
-        background-color: var(--color-primary);
+        background-color: var(--sitenotice2-background--secondary);
         border-radius: var(--sitenotice2-border-radius) 0 0 var(--sitenotice2-border-radius);
         content: "";
         display: block;
@@ -94,7 +96,8 @@
         cursor: pointer;
         transition: opacity 0.2s;
         filter: var(--filter-invert);
-        opacity: var(--opacity-icon-base)
+        opacity: var(--opacity-icon-base);
+        padding: 0 5px;
     }
     
     .mw-dismissable-notice-close:hover {

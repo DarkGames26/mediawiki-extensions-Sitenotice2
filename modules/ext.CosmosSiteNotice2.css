@@ -2,22 +2,22 @@
     ---------  */
     :root {
         --filter-glass: blur(20px) saturate(180%);
-        --sitenotice2-border-radius: 8px;
+        --sitenotice2-border-radius: 2px;
+        --sitenotice2-border: #000;
+
+        --sitenotice2-background: #fbfbfb;
+        --sitenotice2-background--header: #c0c0c0;
+        --sitenotice2-background--secondary: #000;
     }
     
-
-    /* TODO: Update CSS for Cosmos
-    *
-    *
-    */
     /* 👀 Sitenotice position */
     #siteNotice { 
         position: fixed !important; /* 👀 Cancelar cualquier otro valor */
         width: 420px;
         height: auto;
         max-height: 232px;
-        bottom: 18px;
-        left: 75px;
+        bottom: 15px;
+        left: 20px;
         padding: 0px;
         z-index: 10;
         transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
@@ -27,16 +27,13 @@
     @media only screen and (max-width: 1135px) {
       #siteNotice {
         width: 100%; 
-        bottom: 57px;
+        bottom: 0;
         left: 0;
         font-size: 110%;
         }
         .mw-sitenotice2, .mw-sitenotice2:before, .mw-sitenotice2-header {
           border-radius: 0 !important;
       }
-        .citizen-scroll--down #siteNotice {
-            bottom: 0;
-        }
     }
     
     /* ⬅️ Text align to left */
@@ -48,12 +45,11 @@
     /* 🚀 Container */
     .mw-sitenotice2 {
         white-space: nowrap;
-        background-color: var(--color-primary--hsl); /* ✏️ TODO: Only work in Citizen */
-        backdrop-filter: var(--filter-glass);
+        background-color: var(--sitenotice2-background);
         border-radius: var(--sitenotice2-border-radius);
         box-shadow: 0 3px 12px 0 #0000004d;
         overflow: hidden;
-        border: 1px solid var(--border-color-base);
+        border: 1px solid var(--sitenotice2-border);
         display: flex;
         flex-direction: column;
         transition: opacity 0.2s;
@@ -62,7 +58,7 @@
     
     /* 📏 Border left with color */
     .mw-sitenotice2:before {
-        background-color: var(--color-primary);
+        background-color: var(--sitenotice2-background--secondary);
         border-radius: var(--sitenotice2-border-radius) 0 0 var(--sitenotice2-border-radius);
         content: "";
         display: block;
@@ -76,7 +72,7 @@
     /* 📓 Header Container */
     .mw-sitenotice2-header {
         text-align: left;
-        background: var(--content-background); /* ✏️ TODO: Only work in Citizen */
+        background: var(--sitenotice2-background--header);
         border-radius: var(--sitenotice2-border-radius) var(--sitenotice2-border-radius) 0 0;
         padding: 10px 10px;
         align-items: center;
@@ -92,8 +88,14 @@
     }
     
     /* ❌ Close button */
-    .mw-sitenotice2-close {
-        position: relative;
+    .mw-dismissable-notice-close {
+        cursor: pointer;
+        transition: opacity 0.2s;
+        padding: 0 5px;
+    }
+    
+    .mw-dismissable-notice-close:hover {
+        opacity: 0.8;
     }
     
     /* 🧪 Other styles */
