@@ -14,8 +14,8 @@
         width: 420px;
         height: auto;
         max-height: 232px;
-        bottom: 18px;
-        left: 75px;
+        bottom: 15px;
+        left: 20px;
         padding: 0px;
         z-index: 10;
         transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
@@ -25,16 +25,13 @@
     @media only screen and (max-width: 1135px) {
       #siteNotice {
         width: 100%; 
-        bottom: 57px;
+        bottom: 0;
         left: 0;
         font-size: 110%;
         }
         .mw-sitenotice2, .mw-sitenotice2:before, .mw-sitenotice2-header {
           border-radius: 0 !important;
       }
-        .citizen-scroll--down #siteNotice {
-            bottom: 0;
-        }
     }
     
     /* ⬅️ Text align to left */
@@ -46,7 +43,7 @@
     /* 🚀 Container */
     .mw-sitenotice2 {
         white-space: nowrap;
-        background-color: var(--color-primary--hsl);
+        background-color: var(--sitenotice2-background);
         border-radius: var(--sitenotice2-border-radius);
         box-shadow: 0 3px 12px 0 #0000004d;
         overflow: hidden;
@@ -85,7 +82,8 @@
     .mw-sitenotice2-header div:first-child {
            font-size: 18px; 
            padding: 0 10px;  
-           font-weight: 500;
+           font-weight: 600;
+           text-decoration: underline var(--sitenotice2-border);
     }
     
     /* ❌ Close button */

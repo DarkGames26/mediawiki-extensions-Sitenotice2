@@ -20,7 +20,6 @@
         // eslint-disable-next-line no-jquery/no-global-selector
         $('.mw-dismissable-notice-close')
             .css('visibility', 'visible')
-            .find('a')
             .on('click keypress', function(e) {
                 if (
                     e.type === 'click' ||
