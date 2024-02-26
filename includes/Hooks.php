@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\Sitenotice2;
 
-use MediaWiki\Hook\SiteNoticeAfterHook;
+# use MediaWiki\Hook\SiteNoticeAfterHook; # onSiteNoticeAfter is not working correctly.
 use Html;
 use MediaWiki\Parser\Sanitizer;
 use Skin;
