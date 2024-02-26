@@ -25,5 +25,10 @@ wfLoadExtension( 'Sitenotice2' );
 
 | ⚙️ | Name | Description | Values | Default
 :--- | :--- | :--- | :--- | :---
-| ⚙️ | `$wgDismissableSiteNoticeForAnons` | This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the sitenotice shown. Available for MW 1.25 + | `true` or `false` | true
+| ⚙️ | `$wgDismissableSiteNoticeForAnons` | This allows to set whether or not it should be possible for anonymous visitors of the wiki to dismiss the sitenotice shown. Available for MW 1.25 + | `true` or `false` | `true`
+| ⚙️ | `$wgMajorSiteNoticeID` | Integer. The value is stored inside a cookie. When a user decides to close the sitenotice, the current value of `$wgMajorSiteNoticeID` is saved as well and the closed notice is not shown again. `$wgMajorSiteNoticeID` now can be incremented when a new text is set up as sitenotice. If `$wgMajorSiteNoticeID` has inbetween been incremented, then the sitenotice is shown again, even if the user closed an older sitenotice before. | `true` or `false` | `0`
 
+## 🕹️ Usage
+When you add a new sitenotice and want everyone to see it, change the number on the created page "MediaWiki:Sitenotice id" by one (e.g. if it would be 5, you'd replace the page with the number 6 and so on).
+
+The extension behavior is that it will remember the dismissal by the user and only reset after the number in MediaWiki:Sitenotice_id has been raised. This allows a wiki to make minor updates to a notice without causing it to show again for everybody.
