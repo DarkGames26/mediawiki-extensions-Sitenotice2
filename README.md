@@ -5,10 +5,6 @@ Sitenotice2 - MediaWiki
 <p>An extension that improves the appearance of Sitenotice.</p>
 </div>
 
-> [!WARNING]
-> This extension only works in Citizen skin
-> In the rest of the skins the extension works but needs additional style settings.
-
 <div align="left">
 This extension was built based on the DismissableSiteNotice extension, but with different changes to the HTML and CSS structure to improve its appearance.
 </div>

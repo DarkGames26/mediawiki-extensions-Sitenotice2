@@ -43,6 +43,13 @@
 				"mobile"
 			]
 		},
+		"ext.dismissableSiteNotice.citizen.styles": {
+			"styles": "ext.CitizenSiteNotice2.css",
+			"targets": [
+				"desktop",
+				"mobile"
+			]
+		},
 		"ext.dismissableSiteNotice.cosmos.styles": {
 			"styles": "ext.CosmosSiteNotice2.css",
 			"targets": [

@@ -40,7 +40,7 @@ class Hooks {
             // Cargar estilos dependiendo de la skin
             switch ($skinName) {
                 case 'citizen':
-                    $out->addModuleStyles( 'ext.dismissableSiteNotice.styles' );
+                    $out->addModuleStyles( 'ext.dismissableSiteNotice.citizen.styles' );
                     break;
                 case 'cosmos':
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.cosmos.styles' );
@@ -69,14 +69,14 @@ class Hooks {
                     'src' => htmlspecialchars( $iconUrl ),
                     'class' => 'sitenotice2-icon',
                     'alt' => $wikiName,
-                    'style' => 'height: 20px; width: 20px;'
+                    'style' => 'height: 24px; width: 24px;'
                 ] );
             }
 
-            $notice = Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2' ],
+            $notice = Html::rawElement( 'dialog', [ 'class' => 'mw-sitenotice2' ],
                 Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-header' ],
 				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice-icon' ], $wikiIcon ) . // Icono del wiki
-                    Html::element( 'div', [ ], $wikiName ) . // Nombre del wiki
+                    Html::element( 'h2', [ ], $wikiName ) . // Nombre del wiki
                     Html::rawElement( 'div', [ 'class' => 'mw-dismissable-notice-close' ],
                         sprintf(
                             '<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 20 20"><title>%s</title><path d="m4.34 2.93 12.73 12.73-1.41 1.41L2.93 4.35z"/><path d="M17.07 4.34 4.34 17.07l-1.41-1.41L15.66 2.93z"/></svg>',
