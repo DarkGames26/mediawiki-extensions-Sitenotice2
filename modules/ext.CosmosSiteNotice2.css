@@ -2,7 +2,7 @@
     ---------  */
     :root {
         --filter-glass: blur(20px) saturate(180%);
-        --sitenotice2-border-radius: 2px;
+        --sitenotice2-border-radius: 0;
         --sitenotice2-border: #000;
 
         --sitenotice2-background: #fbfbfb;
@@ -109,7 +109,10 @@
         font-size: 18px;
         font-weight: 500;
         margin: 0;
-        line-height: 0;
+        line-height: 1;
+        border: 0 !important;
+        padding-bottom: 5px;
+        width: fit-content;
     }
     
     /* ❌ Close button */

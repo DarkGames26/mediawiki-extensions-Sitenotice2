@@ -22,7 +22,7 @@
     width: 420px;
     height: auto;
     max-height: 232px;
-    inset: auto auto 15px 75px;
+    inset: auto auto 15px 25px;
     padding: 0;
     z-index: 10;
     transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
@@ -108,9 +108,8 @@
 .mw-sitenotice2-header h2 {
     font-size: 18px;
     font-weight: 600;
-    text-decoration: underline var(--sitenotice2-border);
     margin: 0;
-    line-height: 0;
+    line-height: 1;
 }
 
 /* ❌ Close button */
