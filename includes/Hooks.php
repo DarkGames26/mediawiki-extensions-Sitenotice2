@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\Sitenotice2;
 
-# use MediaWiki\Hook\SiteNoticeAfterHook; # onSiteNoticeAfter is not working correctly.
 use Html;
 use MediaWiki\Parser\Sanitizer;
 use Skin;
@@ -44,7 +43,7 @@ class Hooks {
                     break;
                 case 'cosmos':
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.cosmos.styles' );
-                    break;
+                    $out->addModules( 'ext.cosmosSiteNotice2' );                
                 case 'minerva':
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.minerva.styles' );
                     break;
@@ -86,6 +85,12 @@ class Hooks {
 				) .
 				Html::rawElement( 'div', [ 'class' => 'mw-sitenotice2-body' ], $notice )
 			);
+			
+			// Si la skin es "cosmos", elimina los elementos específicos
+			if ($skinName === 'cosmos') {
+				$notice = preg_replace('/<div id="cosmos-content-siteNotice">.*?<\/div>/s', '', $notice);
+				$notice = preg_replace('/<div class="cosmos-button cosmos-button-primary">.*?<\/div>/s', '', $notice);
+			}
 		}
 
         if ( $skin->getUser()->isAnon() ) {
