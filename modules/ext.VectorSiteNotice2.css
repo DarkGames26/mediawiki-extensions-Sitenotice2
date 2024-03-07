@@ -3,9 +3,9 @@
     :root {
         --filter-glass: blur(20px) saturate(180%);
         --sitenotice2-border-radius: 2px;
-        --sitenotice2-border: #a7d7f9;
+        --sitenotice2-border: rgba(167,215,249,0.7);
 
-        --sitenotice2-background: #fbfbfb;
+        --sitenotice2-background: rgba(251,251,251,0.3);
         --sitenotice2-background--header: var(--content-background);
         --sitenotice2-background--secondary: #a7d7f9;
     }
@@ -62,6 +62,7 @@
 #siteNotice p {
     text-align: left;
     padding: 10px 18px;
+    font-size: 110%;
 }
 
 /* 🚀 Container */
@@ -102,7 +103,7 @@
     text-align: left;
     background: var(--sitenotice2-background--header);
     border-radius: var(--sitenotice2-border-radius) var(--sitenotice2-border-radius) 0 0;
-    padding: 10px 15px;
+    padding: 5px 15px;
     display: grid;
     align-items: center;
     align-content: center;
@@ -116,12 +117,14 @@
     max-height: 30px;
     max-width: 75px;
     object-fit: scale-down;
+   /* margin-top: 4px;*/
 }
 /* 📖 h2 styles */
 .mw-sitenotice2-header h2 {
     font-size: 18px;
     font-weight: 600;
     margin: 0;
+    margin-bottom: 6px;
     line-height: 1;
 }
 

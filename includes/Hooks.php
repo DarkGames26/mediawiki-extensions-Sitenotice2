@@ -43,7 +43,7 @@ class Hooks {
                     break;
                 case 'cosmos':
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.cosmos.styles' );
-                    $out->addModules( 'ext.cosmosSiteNotice2' );                
+                #    $out->addModules( 'ext.cosmosSiteNotice2' ); no-load JS Cosmos Skin    
                 case 'minerva':
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.minerva.styles' );
                     break;
