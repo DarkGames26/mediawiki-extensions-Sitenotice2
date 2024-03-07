@@ -28,6 +28,7 @@
     
     /* 👀 Sitenotice position */
     .mw-sitenotice2 {
+        animation: slide-right 0.5s ease-in-out both;
         position: fixed !important;
         /* 👀 Cancelar cualquier otro valor */
         width: 420px;
