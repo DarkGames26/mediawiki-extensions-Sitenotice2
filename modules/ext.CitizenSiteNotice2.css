@@ -2,6 +2,7 @@
     ---------  */
     :root {
         --filter-glass: blur(20px) saturate(180%);
+        --color-primary--hsl: hsla(var(--color-primary__h), var(--color-primary__s), 30%, 0.3);
         --sitenotice2-border-radius: 8px;
         --sitenotice2-border: var(--border-color-base);
     
