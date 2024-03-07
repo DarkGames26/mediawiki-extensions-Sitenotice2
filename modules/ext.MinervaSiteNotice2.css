@@ -8,7 +8,19 @@
         --sitenotice2-background--header: #eaecf0;
         --sitenotice2-background--secondary: #6d6d6f;
     }
-    
+   
+/* 🔁 Animation */
+@keyframes slide-right {
+    0% {
+        transform: translateX(-600px) scale(.2);
+        transform-origin: top left;
+    }
+    100% {
+        transform: translateX(0px) scale(1);
+        transform-origin: top left;
+    }
+}
+
     /* Sitenotice wrapper */
     #siteNotice {
         position: absolute;
