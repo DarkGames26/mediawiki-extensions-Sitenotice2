@@ -5,8 +5,8 @@
         --sitenotice2-border-radius: 0;
         --sitenotice2-border: #000;
 
-        --sitenotice2-background: #fbfbfb;
-        --sitenotice2-background--header: #c0c0c0;
+        --sitenotice2-background: rgba(251,251,251,0.4);
+        --sitenotice2-background--header: rgba(192,192,192,0.4);
         --sitenotice2-background--secondary: #000;
     }
     
@@ -144,10 +144,10 @@
         fill: #cc1b1b;
     }
     
-    /* 🧪 Other styles */
+    /* 🧪 Other styles
         .client-js .mw-sitenotice2 {
             display: none;
-        }
+        } */
     
     .mw-sitenotice2-close {
         visibility: hidden;
