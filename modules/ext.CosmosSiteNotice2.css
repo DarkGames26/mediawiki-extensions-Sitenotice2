@@ -34,7 +34,7 @@
         width: 420px;
         height: auto;
         max-height: 232px;
-        inset: auto auto -15px -70px;
+        inset: auto auto -20px -10px;
         padding: 0;
         z-index: 10;
         transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
@@ -95,9 +95,9 @@
         content: "";
         display: block;
         height: 100%;
-        left: 0;
+        left: -3px !important;
         position: absolute;
-        top: 0;
+        top: -2px;
         width: 6px;
     }
     
@@ -141,7 +141,7 @@
     }
     .mw-dismissable-notice-close:hover {
         opacity: var(--opacity-icon-hover);
-        fill: #ff0000;
+        fill: #cc1b1b;
     }
     
     /* 🧪 Other styles */
