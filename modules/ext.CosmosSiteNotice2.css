@@ -2,7 +2,7 @@
     ---------  */
     :root {
         --filter-glass: blur(20px) saturate(180%);
-        --sitenotice2-border-radius: 0;
+        --sitenotice2-border-radius: 4px;
         --sitenotice2-border: #000;
 
         --sitenotice2-background: rgba(251,251,251,0.4);
@@ -92,13 +92,13 @@
     /* 📏 Border left with color */
     .mw-sitenotice2:before {
         background-color: var(--sitenotice2-background--secondary);
-        border-radius: var(--sitenotice2-border-radius) 0 0 var(--sitenotice2-border-radius);
+        border-radius: var(--sitenotice2-border-radius);
         content: "";
         display: block;
-        height: 100%;
-        left: -3px !important;
+        height: 95%;
+        left: 0 !important;
         position: absolute;
-        top: -2px;
+        top: 0;
         width: 6px;
     }
     
@@ -145,10 +145,10 @@
         fill: #cc1b1b;
     }
     
-    /* 🧪 Other styles
+    /* 🧪 Other styles */
         .client-js .mw-sitenotice2 {
             display: none;
-        } */
+        }
     
     .mw-sitenotice2-close {
         visibility: hidden;
