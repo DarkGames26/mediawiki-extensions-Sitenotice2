@@ -141,6 +141,7 @@
     }
     .mw-dismissable-notice-close:hover {
         opacity: var(--opacity-icon-hover);
+        fill: #ff0000;
     }
     
     /* 🧪 Other styles */

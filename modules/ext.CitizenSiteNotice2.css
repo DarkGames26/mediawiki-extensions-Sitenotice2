@@ -72,6 +72,7 @@
         height: auto;
         max-height: 232px;
         padding: 0;
+        padding-left: 5px;
         white-space: nowrap;
         background-color: var(--sitenotice2-background);
         backdrop-filter: var(--filter-glass);
@@ -82,21 +83,27 @@
         display: flex;
         flex-direction: column;
         transition: opacity 0.2s;
-        transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
-        margin-inline: 0;
+        transition: box-shadow 0.5s, left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s, padding-top 0.3s, border 0.5s;
+    }
+    /* 🎆 Effects for container */
+    .mw-sitenotice2:hover {
+       border: 1px solid var(--sitenotice2-background--secondary);
+       box-shadow: 2px -2px 35px 0 var(--sitenotice2-background--secondary);
     }
     
     /* 📏 Border left with color */
     .mw-sitenotice2:before {
         background-color: var(--sitenotice2-background--secondary);
-        border-radius: var(--sitenotice2-border-radius) 0 0 var(--sitenotice2-border-radius);
+        border-radius: var(--sitenotice2-border-radius);
         content: "";
         display: block;
-        height: 100%;
+        height: 92%;
         left: 0;
         position: absolute;
         top: 0;
         width: 6px;
+        margin-top: 5px;
+        margin-left: 4px;
     }
     
     /* 📓 Header Container */
@@ -134,15 +141,17 @@
         transition: opacity 0.2s;
         filter:var(--filter-invert);
         opacity: var(--opacity-icon-base);
+        transition: filter 0.3s;
     }
     .mw-dismissable-notice-close:hover {
         opacity: var(--opacity-icon-hover);
+        fill: #ff0000;
     }
     
     /* 🧪 Other styles */
         .client-js .mw-sitenotice2 {
             display: none;
-        }
+        } 
     
     .mw-sitenotice2-close {
         visibility: hidden;

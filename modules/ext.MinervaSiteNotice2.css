@@ -1,7 +1,7 @@
 /*  🎨 Vars 
     ---------  */
     :root {
-        --sitenotice2-border-radius: 0;
+        --sitenotice2-border-radius: 4px;
         --sitenotice2-border: #6d6d6f;
 
         --sitenotice2-background: #eaecf0;
@@ -34,7 +34,7 @@
         width: 420px;
         height: auto;
         max-height: 232px;
-        inset: auto auto 15px 75px;
+        inset: auto auto 20px 20px;
         padding: 0;
         z-index: 10;
         transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
@@ -66,9 +66,9 @@
     /* 🚀 Container */
     .mw-sitenotice2 {
         width: 420px;
-        height: auto;
         max-height: 232px;
         padding: 0;
+        padding-left: 5px;
         white-space: nowrap;
         background-color: var(--sitenotice2-background);
         backdrop-filter: var(--filter-glass);
@@ -86,14 +86,16 @@
     /* 📏 Border left with color */
     .mw-sitenotice2:before {
         background-color: var(--sitenotice2-background--secondary);
-        border-radius: var(--sitenotice2-border-radius) 0 0 var(--sitenotice2-border-radius);
+        border-radius: 4px 4px 4px 4px;
         content: "";
         display: block;
-        height: 100%;
+        height: 95%;
         left: 0;
         position: absolute;
         top: 0;
         width: 6px;
+        margin-top: 2px;
+        margin-left: 3px;
     }
     
     /* 📓 Header Container */
@@ -129,10 +131,10 @@
         cursor: pointer;
         transition: opacity 0.2s;
         filter:var(--filter-invert);
-        opacity: var(--opacity-icon-base);
+        opacity: 0.8;
     }
     .mw-dismissable-notice-close:hover {
-        opacity: var(--opacity-icon-hover);
+        opacity: 1;
     }
     
     /* 🧪 Other styles */
