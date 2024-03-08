@@ -36,17 +36,6 @@
 				"mobile"
 			]
 		},
-		"ext.cosmosSiteNotice2": {
-			"scripts": "ext.CosmosSiteNotice.js",
-			"dependencies": [
-				"mediawiki.util",
-				"jquery.client"
-			],
-			"targets": [
-				"desktop",
-				"mobile"
-			]
-		},
 		"ext.dismissableSiteNotice.styles": {
 			"styles": "ext.SiteNotice2.css",
 			"targets": [

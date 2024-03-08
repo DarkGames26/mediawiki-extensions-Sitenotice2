@@ -43,17 +43,16 @@ class Hooks {
                     break;
                 case 'cosmos':
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.cosmos.styles' );
-                #    $out->addModules( 'ext.cosmosSiteNotice2' ); no-load JS Cosmos Skin    
                 case 'minerva':
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.minerva.styles' );
                     break;
                 case 'vector':
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.vector.styles' );
                     break;
-                default:
+                default: # Default Styles for All Skins
                     $out->addModuleStyles( 'ext.dismissableSiteNotice.styles' );
             }
-
+            # JS for all Skins.
             $out->addModules( 'ext.dismissableSiteNotice' );
             $out->addJsConfigVars( 'wgSiteNoticeId', "$major.$minor" );
 
