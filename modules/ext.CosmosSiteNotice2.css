@@ -34,12 +34,12 @@
         width: 420px;
         height: auto;
         max-height: 232px;
-        inset: auto auto 105px 5px;
+        inset: auto auto -15px -70px;
         padding: 0;
         z-index: 10;
         transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
         background: none !important;
-        border: 0;
+        border: 0 !important;
         min-height: 0;
 }
 #cosmos-content-siteNotice .cosmos-button-primary { display: none; }
@@ -48,7 +48,7 @@
     @media only screen and (max-width: 1135px) {
         #cosmos-content-siteNotice {
             width: 100% !important;
-            bottom: 96px;
+            bottom: -70px;
             left: -17px;
             font-size: 110%;
         }
@@ -126,7 +126,7 @@
         font-size: 18px;
         font-weight: 500;
         margin: 0;
-        line-height: 1;
+        line-height: 1 !important;
         border: 0 !important;
         padding-bottom: 5px;
         width: fit-content;
