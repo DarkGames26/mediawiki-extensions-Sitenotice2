@@ -71,7 +71,8 @@
     height: auto;
     max-height: 232px;
     padding: 0;
-    white-space: nowrap;
+    white-space: normal;
+    text-wrap: pretty;
     background-color: var(--sitenotice2-background);
     backdrop-filter: var(--filter-glass);
     border-radius: var(--sitenotice2-border-radius);

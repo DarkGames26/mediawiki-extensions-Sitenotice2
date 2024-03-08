@@ -63,7 +63,7 @@
     /* ⬅️ Text align to left */
     #siteNotice p {
         text-align: left;
-        padding: 10px 18px;
+        padding: 0 15px;
     }
     
     /* 🚀 Container */
@@ -73,7 +73,8 @@
         max-height: 232px;
         padding: 0;
         padding-left: 5px;
-        white-space: nowrap;
+        white-space: normal;
+        text-wrap: pretty;
         background-color: var(--sitenotice2-background);
         backdrop-filter: var(--filter-glass);
         border-radius: var(--sitenotice2-border-radius);
