@@ -35,15 +35,19 @@
         height: auto;
         max-height: 232px;
         inset: auto auto -20px -10px;
-        padding: 0;
+        padding: 0 !important;
         z-index: 10;
-        transition: left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s;
+        transition: box-shadow 0.5s, left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s, padding-top 0.3s, border 0.5s;
         background: none !important;
         border: 0 !important;
         min-height: 0;
 }
 #cosmos-content-siteNotice .cosmos-button-primary { display: none; }
-
+    /* 🎆 Effects for container */
+    .mw-sitenotice2:hover {
+        border: 1px solid var(--sitenotice2-background--secondary);
+        box-shadow: 2px -2px 35px 0 var(--sitenotice2-background--secondary);
+     }
     
     @media only screen and (max-width: 1135px) {
         #cosmos-content-siteNotice {
@@ -56,7 +60,6 @@
             width: 100% !important;
         }
         .mw-sitenotice2,
-        .mw-sitenotice2:before,
         .mw-sitenotice2-header {
             border-radius: 0 !important;
         }
@@ -137,11 +140,10 @@
     .mw-dismissable-notice-close {
         cursor: pointer;
         transition: opacity 0.2s;
-        filter:var(--filter-invert);
-        opacity: var(--opacity-icon-base);
+        opacity: 0.8;
     }
     .mw-dismissable-notice-close:hover {
-        opacity: var(--opacity-icon-hover);
+        opacity: 1;
         fill: #cc1b1b;
     }
     

@@ -32,3 +32,29 @@ wfLoadExtension( 'Sitenotice2' );
 When you add a new sitenotice and want everyone to see it, change the number on the created page "MediaWiki:Sitenotice id" by one (e.g. if it would be 5, you'd replace the page with the number 6 and so on).
 
 The extension behavior is that it will remember the dismissal by the user and only reset after the number in MediaWiki:Sitenotice_id has been raised. This allows a wiki to make minor updates to a notice without causing it to show again for everybody.
+
+## Configurando Colores
+Sitenotice2 fue pensada para ser altamente modificable fácilmente con CSS, por lo que la extensión tiene diferentes variables que se usan para los colores que se muestran en el aviso, lo cuál permite que puedas modificar fácilmente su aspecto.
+
+### Variables CSS
+| ⚙️ | Name | Description
+:--- | :--- | :---
+| ⚙️ | `--filter-glass` | Filtro aplicado a todo el aviso.
+| ⚙️ | `--sitenotice2-border-radius` | border-radius aplicado en diferentes partes del aviso, tanto en el conteneidor principal, como en el borde izquierdo.
+| ⚙️ | `--sitenotice2-border` | Color del borde
+| ⚙️ | `--sitenotice2-background`  | Fondo del aviso.
+| ⚙️ | `--sitenotice2-background--header` | Fondo para el encabezado. En caso que no quieras fondo, solo establecelo en `transparent`.
+| ⚙️ | `--sitenotice2-background--secondary`  | Fondo para el borde izquierdo del aviso.
+
+
+### Ejemplo de configuración:
+```/*  🎨 Extension:Sitenotice2 
+    -------------------------  */
+:root {
+	--sitenotice2-border-radius: 6px;
+	--sitenotice2-border: #a51919;
+
+	--sitenotice2-background: rgba(232,189,189,0.73);
+	--sitenotice2-background--header: rgba(251,225,225,0.6);
+	--sitenotice2-background--secondary: #a51919;
+}```
