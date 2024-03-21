@@ -48,7 +48,8 @@ Sitenotice2 fue pensada para ser altamente modificable fácilmente con CSS, por 
 
 
 ### Ejemplo de configuración:
-```/*  🎨 Extension:Sitenotice2 
+```
+/*  🎨 Extension:Sitenotice2 
     -------------------------  */
 :root {
 	--sitenotice2-border-radius: 6px;
@@ -57,4 +58,5 @@ Sitenotice2 fue pensada para ser altamente modificable fácilmente con CSS, por 
 	--sitenotice2-background: rgba(232,189,189,0.73);
 	--sitenotice2-background--header: rgba(251,225,225,0.6);
 	--sitenotice2-background--secondary: #a51919;
-}```
+}
+```
