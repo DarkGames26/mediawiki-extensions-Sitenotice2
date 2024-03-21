@@ -33,21 +33,19 @@ When you add a new sitenotice and want everyone to see it, change the number on 
 
 The extension behavior is that it will remember the dismissal by the user and only reset after the number in MediaWiki:Sitenotice_id has been raised. This allows a wiki to make minor updates to a notice without causing it to show again for everybody.
 
-## Configurando Colores
-Sitenotice2 fue pensada para ser altamente modificable fácilmente con CSS, por lo que la extensión tiene diferentes variables que se usan para los colores que se muestran en el aviso, lo cuál permite que puedas modificar fácilmente su aspecto.
-
-### Variables CSS
+## 🎨 Configuring Colors
+Sitenotice2 was thought to be highly modifiable easily with CSS, so the extension has different variables that are used for the colors displayed in the notice, which allows you to easily modify its appearance.
+### CSS Variables
 | ⚙️ | Name | Description
 :--- | :--- | :---
-| ⚙️ | `--filter-glass` | Filtro aplicado a todo el aviso.
-| ⚙️ | `--sitenotice2-border-radius` | border-radius aplicado en diferentes partes del aviso, tanto en el conteneidor principal, como en el borde izquierdo.
-| ⚙️ | `--sitenotice2-border` | Color del borde
-| ⚙️ | `--sitenotice2-background`  | Fondo del aviso.
-| ⚙️ | `--sitenotice2-background--header` | Fondo para el encabezado. En caso que no quieras fondo, solo establecelo en `transparent`.
-| ⚙️ | `--sitenotice2-background--secondary`  | Fondo para el borde izquierdo del aviso.
+| ⚙️ | `--filter-glass` | Filter applied to the entire notice.
+| ⚙️ | `--sitenotice2-border-radius` | border-radius applied to different parts of the notice, both in the main container and on the left border.
+| ⚙️ | `--sitenotice2-border` | Border-color
+| ⚙️ | `--sitenotice2-background` | Background of the notice.
+| ⚙️ | `--sitenotice2-background--header` | Background for the header. In case you don't want background, just set it to `-transparent`.
+| ⚙️ | `--sitenotice2-background--secondary` | Background for the left border of the notice.
 
-
-### Ejemplo de configuración:
+### Example configuration:
 ```
 /*  🎨 Extension:Sitenotice2 
     -------------------------  */
