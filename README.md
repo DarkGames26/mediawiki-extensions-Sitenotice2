@@ -31,6 +31,8 @@ Sitenotice2 - MediaWiki
     </a>
 </div>
 
+<p></p>
+
 <div align="left">
 This extension was built based on the DismissableSiteNotice extension, but with different changes to the HTML and CSS structure to improve its appearance.
 </div>
