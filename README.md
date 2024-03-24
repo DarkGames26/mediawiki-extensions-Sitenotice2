@@ -27,7 +27,7 @@ Sitenotice2 - MediaWiki
     </a>
     <span>&nbsp;✦&nbsp;</span>
     <a href="#-screenshots">
-        Configurations
+        Screenshots
     </a>
 </div>
 
