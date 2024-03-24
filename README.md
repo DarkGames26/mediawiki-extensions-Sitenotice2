@@ -1,4 +1,5 @@
 <div align="center">
+<img src="img/Sitenotice2_Screenshot.png" height="auto" width="auto" /> 
 <h3>
 Sitenotice2 - MediaWiki
 </h3>
@@ -58,3 +59,8 @@ Sitenotice2 was thought to be highly modifiable easily with CSS, so the extensio
 	--sitenotice2-background--secondary: #a51919;
 }
 ```
+
+## Screenshots
+<img src="img/Sitenotice2_Screenshot.png" height="auto" width="auto" /> 
+<img src="img/Sitenotice2_Screenshot_2.png" height="auto" width="auto" /> 
+<img src="img/Sitenotice2_Screenshot_3.gif" height="auto" width="auto" /> 
