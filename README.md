@@ -26,7 +26,7 @@ Sitenotice2 - MediaWiki
         Usage
     </a>
     <span>&nbsp;✦&nbsp;</span>
-    <a href="#-screenshots">
+    <a href="#%EF%B8%8F-screenshots">
         Screenshots
     </a>
 </div>
