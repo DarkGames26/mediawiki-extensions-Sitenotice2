@@ -4,6 +4,6 @@
 			"DarkGames26"
 		]
 	},
-	"sitenotice_close": "Ocultar",
-	"sitenotice-desc": "Extiende la apariencia visual del Sitenotice. También permite a los usuarios cerrar el aviso."
+	"sitenotice_close": "Cerrar",
+	"sitenotice-desc": "Mejora la apariencia visual del Sitenotice añadiendo un encabezado junto con el logo del wiki y haciendo el aviso flotante y más agradable. También permite a los usuarios cerrar el aviso."
 }
