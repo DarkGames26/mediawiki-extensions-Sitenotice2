@@ -1,9 +1,34 @@
 <div align="center">
-<img src="img/Sitenotice2_Screenshot.png" height="auto" width="auto" /> 
 <h3>
 Sitenotice2 - MediaWiki
 </h3>
 <p>An extension that improves the appearance of Sitenotice.</p>
+</div>
+
+<div align="center">
+    <a href="https://central.staging.polandball.wiki/wiki/">
+        Preview
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#-installation">
+        Installation
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#-notes">
+        Notes
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#-configurations">
+        Configurations
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#-usage">
+        Usage
+    </a>
+    <span>&nbsp;✦&nbsp;</span>
+    <a href="#-screenshots">
+        Configurations
+    </a>
 </div>
 
 <div align="left">
@@ -64,3 +89,12 @@ Sitenotice2 was thought to be highly modifiable easily with CSS, so the extensio
 <img src="img/Sitenotice2_Screenshot.png" height="auto" width="auto" /> 
 <img src="img/Sitenotice2_Screenshot_2.png" height="auto" width="auto" /> 
 <img src="img/Sitenotice2_Screenshot_3.gif" height="auto" width="auto" /> 
+
+
+## ✅ Por hacer...
+
+- [ ] Implementar compatibilidad con DismissableSiteNotice.
+- [ ] Corregir border-radius en Citizen, Minerva Y Default.
+- [ ] Alinear de manera más apropiada los Logos del encabezado.
+- [ ] Implementar compatibilidad para idiomas que se lee de derecha a izquierda.
+- [ ] Mejorar la animación al cerrar el aviso.
