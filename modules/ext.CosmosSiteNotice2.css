@@ -8,6 +8,8 @@
         --sitenotice2-background: rgba(251,251,251,0.4);
         --sitenotice2-background--header: rgba(192,192,192,0.4);
         --sitenotice2-background--secondary: #000;
+
+        --sitenotice2-transitions: box-shadow 0.5s, left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s, padding-top 0.3s, border 0.5s;
     }
     
 /* 🔁 Animation */
@@ -37,13 +39,16 @@
         inset: auto auto -20px -10px;
         padding: 0 !important;
         z-index: 10;
-        transition: box-shadow 0.5s, left 0.3s, bottom 0.3s, width 0.3s, height 0.3s, font-size 0.3s, border-radius 0.3s, padding-top 0.3s, border 0.5s;
+        transition: var(--sitenotice2-transitions);
         background: none !important;
         border: 0 !important;
         min-height: 0;
-}
-#cosmos-content-siteNotice .cosmos-button-primary { display: none; }
+    }
+    #cosmos-content-siteNotice .cosmos-button-primary { display: none; }
     /* 🎆 Effects for container */
+    .mw-sitenotice2 {
+        transition: var(--sitenotice2-transitions);
+    }
     .mw-sitenotice2:hover {
         border: 1px solid var(--sitenotice2-background--secondary);
         box-shadow: 2px -2px 35px 0 var(--sitenotice2-background--secondary);
